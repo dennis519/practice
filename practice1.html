@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    html,body{
+        height: 100%;
+    }
+    body{
+        /* 不重負置中且滿版*/
+        background: url("https://picsum.photos/1920?random=1") no-repeat center center / cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .login{
+        height: 450px;
+        width: 600px;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        border: 10px solid #fff;
+        box-shadow: 0 0 60px #000;
+        backdrop-filter: blur(5px) ;    /* 玻璃效果*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form{
+        width: 400px;
+        color: #fff;
+        position: relative;
+    }
+    .form h2{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    }
+    .reset{
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 330px;  
+    }
+    .reset a {
+        color: #fff;
+        text-decoration: none;  /* 取消超連結下引線*/
+
+    }
+    .reset:hover a{
+        color: blue;
+    }
+    .form .group1{
+        margin-bottom: 5px;
+    }
+    .form label{
+        line-height: 2;
+    }
+    .form input{
+        width: 100%;
+        border: 1px solid #aaa;
+        line-height: 2;
+        border-radius: 5px;
+    }
+    .form .btn-group{
+        font-size: 0;
+    }
+    .form .btn{
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: bisque;
+        width: 190px;
+        padding: 10px 0;
+    }
+    .form .btn + .btn{
+        margin-left: 20px;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form class="form">
+            <h2>會員登入</h2>
+            <div class="group">
+                <label for="user_id">帳號</label>
+                <input type="text" id="user_id">
+            </div>
+            <div class="group1">
+                <label for="user_password">密碼</label>
+                <input type="password" id="user_password">
+            </div>
+            <div class="reset">
+                <a href="#">忘記密碼</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn">註冊</button>
+                <button class="btn">登入</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

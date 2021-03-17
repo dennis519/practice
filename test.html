@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    html,body{
+        height: 100%;
+    }
+    body{
+        background-color: darkgray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        text-align: center;
+    }
+    .video{
+        border: 5px solid #fff;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    .btn_list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    button{
+        display: none;
+        margin: 0 50px;
+        padding: 20px;
+    }
+    .error_message{
+        opacity: 0;
+        text-align: center;
+        color: crimson;
+    }
+    </style>
+    <title>Interaction test</title>
+</head>
+<body>
+    <div class="bar">
+        <h1>Type1</h1>
+        <div class="video">
+            <video id="LOL" class="video-js vjs-big-play-centered" controls preload="auto" width="920" height="640" data-setup="{}">
+                <source src="./Awaken.mp4" type="video/mp4"/>
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a
+                    web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+        <div class="btn_list" id="btn_list">
+            <button type="button" name="btn_answer" id="correct">答案1</button>
+            <button type="button" name="btn_answer" id="nope1">答案2</button>
+            <button type="button" name="btn_answer" id="nope2">答案3</button>
+        </div>
+        <div class="error_message">
+            <p>此工具無法達到該效果</p>
+        </div>
+    </div>
+    <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

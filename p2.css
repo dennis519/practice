@@ -1,0 +1,603 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-header{
+    width: 100%;
+    position: fixed;
+    background:#3e5293;
+    z-index: 10;
+}
+.ma-container{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: auto; 
+    position: relative; 
+}
+.logo{
+    width: 100px;
+}
+.logo img{
+    width: 100%;          
+    vertical-align: middle;
+}
+.main-nav{
+    margin: auto;
+    display: flex;
+}
+.main-nav a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 1em;
+    position: relative;  
+    transform: translateY(0px);
+    transition: .3s; 
+}
+.main-nav a:hover{
+    transform: translateY(-5px);
+}
+.main-nav a::after{
+    content: '';
+    position: absolute;
+    left: 50%;    /* 元素距離中心左側50% */
+    right: 50%;
+    height: 0;
+    bottom: -5px;
+    border-bottom: 1px solid #fff;
+    transition: .3s;
+}
+.main-nav a:hover::after{
+    /* a摸到 after才有效果 */
+    left: 0%;
+    right: 0%;
+}
+.header-search{
+    display: flex; /* 搜尋欄和按鈕圖並排 */
+}
+.header-search button,
+.header-search input{
+    border: none;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+.header-search button:focus,
+.header-search input:focus{
+    outline: none;  /* 讓搜尋的外框消失 */
+}
+.header-search button{
+    border-radius: 0 200px 200px 0;
+}
+.header-search input{
+    border-radius: 200px 0 0 200px;
+}
+.banner{
+    width: 100%;
+    height: 700px;
+    background-color: blue;
+    background: linear-gradient(115deg, #7bf 50%, transparent 50%) center center / 100% 100%,
+    url("https://picsum.photos/1200/600?random=10") right center / auto 100%;
+
+}
+.container{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+.banner-txt{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.banner-txt h1{
+    font-size: 80px;
+    border-bottom: 1px solid #333;
+    font-weight: 900;
+}
+.banner-txt h1 small{
+    display: block;
+    font-size: 53px;
+    font-weight: 700;
+}
+.banner-txt h2{
+    font-size: 50px;
+    font-weight: 700;
+}
+.banner-txt p{
+    font-size: 20px;
+    font-weight: 300;
+}
+.sp{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background-color:wheat;
+}
+.sp-txt h3{
+    font-weight: 500;
+    font-size: 20px;
+}
+.wrap{
+    width: 100%;
+    display: flex;
+}
+.item{
+    width: 25%;
+    position: relative;
+}
+.item img{
+    width: 100%;
+    vertical-align: middle;
+}
+.item .txt{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.item:hover .txt{
+    opacity: 1;
+}
+.item h2{
+    font-size: 28px;
+    color:tan;
+    font-weight: 500;
+}
+.item h2::after{
+    content: '';
+    display: block; 
+    width: 0%;
+    height: 2px;
+    margin: 10px 0;
+    background-color:coral;
+    transition: width .5s .3s;
+}
+.item:hover h2::after{
+    width: 100%;
+
+}
+.item p{
+    font-size: 18px;
+    color: #fff;
+}
+.card{
+    display: flex;
+    align-items: center;
+    height: 700px;
+    background-color: #191970;
+}
+.wrap2{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    justify-content: center;
+}
+ .item1{
+    width: 368px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    transform: translateY(0);
+    transition: .5s;      
+}
+.item1 .txt{
+    padding: 20px;
+    position: relative;
+}
+.item1 .txt::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    border-top: 50px solid transparent;
+    border-left: 184px solid #fff;
+    border-right: 184px solid #fff;
+    transform: translateY(-100%);
+}
+.item1:hover{
+    transform: translateY(-50px);
+}
+.item1:hover .txt::before{
+    border-left: 184px solid #FEB85D;
+    border-right: 184px solid #FEB85D;
+}
+.item1:hover .txt{
+    background-image:linear-gradient(0deg, #FB8076, #FEB85D);
+}
+.item1:hover h2{
+    color: #fff;
+    border-bottom-color: #fff;
+    transition: .25s;    
+}
+.item1:hover p{
+    color: #fff;
+    transition: .25s;
+}
+.item1 img{
+    width: 100%;
+    vertical-align: middle ;
+}
+.item1 h2{
+    border-bottom: 1px solid #888;
+    padding-bottom: .3em;
+    margin-bottom: .4em;
+    font-weight: 800;
+}
+.item1 p{
+    font-weight: 500;
+    line-height: 1.5;
+}
+.wrap3{
+    padding: 100px 0;
+    background: linear-gradient(20deg,#3d5493,#1aa2a0) fixed center center / 100% 100%;
+}
+.inf{
+    width: 1200px;
+    margin: auto;
+}
+.item2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.item2 .pic{
+    width: 55%;
+}
+.item2 .pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+.item2 .txt{
+    width: 55%;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+.item2 > :first-child{
+    margin-right: -10%;
+}
+.item2:nth-child(1) .txt{
+    background-color: rgba(240, 174, 193,.8);                    
+}
+.item2:nth-child(2) .txt{
+    background-color: rgba(42, 253, 208,.8);
+}
+.item2:nth-child(3) .txt{
+    background-color: rgba(254, 201, 121,.8);
+}
+.item2:nth-child(4) .txt{
+    background-color: rgba(68, 179, 96, 0.5);
+}
+.wrap4{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(20deg, rgb(251, 128, 118), #FEB85D) fixed center center / 100% 100%;
+}
+.container1{
+    width: 1200px;
+    margin: auto;   
+    display: flex;       
+}
+.item3{
+    width: 368px;
+    margin: 0 15px;
+    display: flex;
+    background-color: #fff; 
+    border: 1px solid #888;
+    box-shadow: 0 10px 30px rgba(160, 0, 0, 0.6);
+}
+.item3 .pic{
+    width: 50%;
+}
+.item3 .pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.item3 .txt{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.item3 .txt h2{
+    font-weight: 500;
+    margin-bottom: 0.4em;
+}
+.item3 .txt .btn{
+    line-height: 1.5em;
+    border: 1px solid #ccc;
+    padding: 0 1em;
+    align-self: flex-end;
+    text-decoration: none;
+    border-radius: 200px;
+    margin-top: auto;
+    color:rgba(0,0,0,.6);
+}
+.item3 .txt .btn:hover{
+    background-color: #ccc;
+    color: #fff;
+}
+.main-footer{
+    padding: 150px 0  ;
+    background: linear-gradient(-20deg,#3f5494,#08c7a5);
+}
+.main-footer .container2{
+    width: 1200px;
+    display: flex;
+    margin: auto;
+}
+.footer-item{
+    width: 0;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+.footer-item nav{
+    display: flex;
+    flex-direction: column;
+}
+.footer-item h4{
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+}
+.footer-item nav a{
+    color: #fff;
+    line-height: 1.4;
+    padding: 5px 0;
+    text-decoration: none;
+}
+.footer-item1{
+    width: 0;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+.footer-item1 h4{
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+}
+.footer-item1 nav a{
+    margin-right: 20px;
+    font-size: 24px;
+    border-radius: 200%;
+    color: #fff;
+    line-height: 1.4;
+    text-decoration: none;
+}
+.footer-item nav a:hover{
+    color: #fa0;   
+}
+.copyright{
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #3e5293;
+    color: #70f6df;
+}
+.bb{
+    background-color: #000000;
+}
+.wp{
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    overflow: hidden;
+}
+.it{
+    float: left;
+    position: relative;
+}
+.it:hover .txt{
+    opacity: 1;
+    transform: scale(1);
+}
+.it .txt{
+    position: absolute; /* 文字絕對定位在父層it上 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box; /* 設定了padding讓畫面超出100%,因此加入此行 */
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transform: scale(0);
+    transition: .3s;
+    background-color: rgba(0,0,0,.6);
+    /* 以下屬性讓文字垂直居中 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.it h3{
+    margin-bottom: .4em;
+}
+.it p{
+    font-weight: 100;
+    line-height: 1.7;
+}
+.it img{
+    width: 100%;
+    vertical-align: middle;
+}
+.it:first-child{
+    /* it的第一個子物件佔寬度50% */
+    width: 50%; 
+}
+.it:first-child ~ .it{
+    /* it的其他子物件佔寬度25% */
+    width: 25%;
+}
+.bbb{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(-45deg ,#8eafd4,#386394 );
+}
+.wp1{
+    display: flex;
+    width: 1200px;
+    margin: 100px auto;
+    padding-top: 75px; /* icon超出框架75px要補上*/
+}
+.it1{
+    width: 370px;
+    margin: 0 15px;
+    text-align: center; /* 文字的垂直居中*/
+    padding: 0 15px;
+    border: 10px solid #5f94e4;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 10px 20px 50px #486497;    
+}
+.it1 .icon{
+    width: 150px;
+    height: 150px;
+    background-color: #fa0;
+    margin: -75px auto 0;  /*破格*/
+    font-size: 70px;
+    line-height: 150px; /*適用於單行文字的垂直居中*/
+    border-radius: 50%;  
+    position: relative;
+}
+.it1 .icon::before{
+    /*圓形邊框*/ 
+    content: '';
+    position: absolute;
+    left: -10px;   /*要扣掉邊框線10px*/
+    top: -10px;   /*要扣掉邊框線10px*/ 
+    width: 100%;
+    height: 100%;
+    border-top: 10px solid #5f94e4;
+    border-right: 10px solid #5f94e4;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transform: rotate(-45deg);
+    border-radius: 50%;
+}
+.it1 .txt{
+    
+    padding: 20px 20px 2em;
+}
+.it1 h3{
+    color: #5274e2;
+    font-weight: 800;
+}
+.it1 p{
+    transition: .3s;
+    margin-top: 10px;
+    color: #6d6a6a;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+.it1:hover .fas{
+    animation: shake .2s linear infinite alternate; /*線性搖動無加速+無限+來回*/
+}
+
+@keyframes shake{
+    /*搖動的動畫*/
+    0%{transform: rotate(-10deg);}
+    100%{transform: rotate(10deg);}
+}
+.side-bar label{
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px 10px;
+}
+.side-menu{
+    position: fixed;
+    margin-top: 140px;
+    width: 300px;
+    height: 100vh;
+    padding: 50px 0px;
+    box-sizing: border-box;
+    background-color: #020b35d2;
+    display: none;
+    flex-direction: column;
+    transform: translateX(-100%);
+    z-index: 11;
+}
+#side-menu-switch{
+    position: absolute;
+    opacity: 0;
+}
+#side-menu-switch:checked + .side-menu{
+    display: flex;
+    transform: translateX(0);
+}
+.side-menu form{
+    display: flex;
+    margin: 0 10px 50px;
+}
+.side-menu form input{
+    border: none;
+    padding: 5px 10px;
+    width: 230px;
+}
+.side-menu form button{
+    border: none;
+    padding: 5px 10px;
+    width: 50px;
+}
+.side-menu form input:focus,
+.side-menu form button:focus{
+    outline: none;
+}
+.side-menu nav a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+.side-menu nav .fas{
+    margin-right: -1.1em;
+    transform: scale(0);  
+    transition: .3s;
+}
+.side-menu nav a:hover .fas{
+    margin-right: 0em;
+    transform: scale(1);
+}
+.side-menu nav a + a::before{
+    /*製作選單個項目上方白線 用絕對定位設定因為padding會壓下白線*/
+    content: '';
+    position: absolute;
+    border-top: 1px solid #fff;
+    left: 10px;
+    right: 10px;
+    top: 0;
+}
